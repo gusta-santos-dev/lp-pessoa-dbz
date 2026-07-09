@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+    transition: .3s ease-in-out;
+}
+
+:root {
+    --main-color: #EFDF2E;
+    --secondary-color: #DF1F2E;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animações */
+@keyframes fadeSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeSlideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomBg {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.08);
+    }
+}
+
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0px rgba(239, 223, 46, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 18px rgba(239, 223, 46, 0.8);
+    }
+}
+
+.anim {
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-duration: .9s;
+    animation-timing-function: ease-out;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    color: white;
+    width: 100%;
+    padding: 20px 50px;
+    background: linear-gradient(0deg, #15151597 2%, rgba(0, 7, 133, 0) 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.292);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Saiyan Sans';
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--main-color);
+    text-shadow: 2px 2px 0px #000, -1px -1px 0px #000;
+}
+
+.logo strong {
+    font-weight: 400;
+    color: var(--secondary-color);
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.menu a {
+    display: inline-block;
+}
+
+.menu a:hover {
+    color: grey;
+    transform: translateY(-3px);
+}
+
+/* End Header */
+
+/* Banner */
+
+.banner {
+    background-image: url('/assets/img/banner_1.webp');
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    animation: zoomBg 20s ease-out forwards;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container-content {
+    margin-top: 150px;
+    width: 35%;
+    color: white;
+}
+
+h1 {
+    font-family: 'Saiyan Sans';
+    font-size: 9rem;
+    font-weight: 400;
+    color: var(--main-color);
+    text-shadow: 4px 4px 5px #000, -1px -1px 0px #000;
+}
+
+h1 strong {
+    font-weight: 400;
+    color: var(--secondary-color);
+}
+
+.content {
+    font-size: 1.5rem;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.btn-saiba{
+    display: block;
+    margin-top: 1.1em;
+    font-size: 1.3rem;
+    transition: .3s ease-in-out;
+}
+
+.btn-saiba * {
+    transition: .3s ease-in-out;
+}
+
+.btn-saiba span {
+    border-radius: 50%;
+    padding: 5px;
+    margin-right: 10px;
+    border: 3px solid white;
+    animation: pulseGlow 2.2s ease-in-out infinite;
+    animation-delay: 2.5s;
+}
+
+.btn-saiba:hover span{
+    margin-right: 20px;
+}
+
+.btn-saiba:hover {
+    transform: translateX(5px);
+}
+
+/* End Banner */
+
+/* Footer */
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 50px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5rem;
+}
+
+footer p{
+    font-weight: 200;
+    font-size: 1.8rem;
+}
+
+.list__redes-sociais{
+    display: flex;
+    gap: 8px;
+    
+}
+
+.list__redes-sociais li a {
+    display: inline-block;
+    padding: 5px;
+    font-size: 2rem;
+}
+
+.list__redes-sociais li a:hover {
+    color: grey;
+    transform: translateY(-5px);
+}
+
+/* End Footer */
+/* Entrada em cascata */
+.logo.anim {
+    animation-name: fadeSlideDown;
+    animation-delay: .1s;
+}
+
+.menu.anim li {
+    opacity: 0;
+    animation-name: fadeSlideDown;
+    animation-fill-mode: forwards;
+    animation-duration: .9s;
+    animation-timing-function: ease-out;
+}
+
+.menu.anim li:nth-child(1) {
+    animation-delay: .25s;
+}
+
+.menu.anim li:nth-child(2) {
+    animation-delay: .4s;
+}
+
+.menu.anim li:nth-child(3) {
+    animation-delay: .55s;
+}
+
+h1.anim {
+    animation-name: fadeSlideLeft;
+    animation-delay: .5s;
+    animation-duration: 1.1s;
+}
+
+.content.anim {
+    animation-name: fadeSlideUp;
+    animation-delay: 1s;
+}
+
+.btn-saiba.anim {
+    animation-name: fadeSlideUp;
+    animation-delay: 1.4s;
+}
+
+footer.anim {
+    animation-name: fadeSlideUp;
+    animation-delay: 1.8s;
+}
+
+.list__redes-sociais.anim li {
+    opacity: 0;
+    animation-name: fadeSlideUp;
+    animation-fill-mode: forwards;
+    animation-duration: .8s;
+    animation-timing-function: ease-out;
+}
+
+.list__redes-sociais.anim li:nth-child(1) {
+    animation-delay: 2s;
+}
+
+.list__redes-sociais.anim li:nth-child(2) {
+    animation-delay: 2.15s;
+}
+
+.list__redes-sociais.anim li:nth-child(3) {
+    animation-delay: 2.3s;
+}
+
+/* Correção: os contêineres (ul) não têm animação própria,
+   só os itens (li) — então o contêiner precisa ficar visível
+   pra não esconder os filhos */
+.menu.anim,
+.list__redes-sociais.anim {
+    opacity: 1;
+}

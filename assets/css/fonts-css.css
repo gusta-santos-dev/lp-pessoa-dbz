@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Saiyan Sans - Left Oblique';
+    src: url('/assets/fonts/SaiyanSans.woff2') format('woff2'),
+        url('/assets/fonts/SaiyanSans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saiyan Sans - Right Oblique';
+    src: url('/assets/fonts/SaiyanSans_1.woff2') format('woff2'),
+        url('/assets/fonts/SaiyanSans_1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saiyan Sans';
+    src: url('/assets/fonts/SaiyanSans_2.woff2') format('woff2'),
+        url('/assets/fonts/SaiyanSans_2.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
