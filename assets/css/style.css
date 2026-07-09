@@ -148,7 +148,7 @@ nav {
 /* Banner */
 
 .banner {
-    background-image: url('/assets/img/banner_1.webp');
+    background-image: url("/assets/img/banner_1.webp");
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;
